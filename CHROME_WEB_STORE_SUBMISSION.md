@@ -153,7 +153,11 @@ No. All extension logic is bundled in the submitted package. The extension reque
 
 ### Privacy policy
 
-Chrome Web Store 通常需要一个公开可访问的隐私政策 URL。可以把 `PRIVACY_POLICY.md` 发布到 GitHub 仓库、GitHub Pages、Notion 公开页或你自己的站点，然后把 URL 填进去。
+Chrome Web Store 需要一个公开可访问、直接打开隐私政策正文的 URL。当前建议填：
+
+```text
+https://icoolqin.github.io/yt-bili-helper/privacy/
+```
 
 ## Distribution
 
