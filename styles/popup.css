@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  background: #f7f9fc;
+  color: #172033;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+.popup {
+  width: 360px;
+  padding: 14px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.eyebrow {
+  color: #667085;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+h1 {
+  color: #101828;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 2px 0 0;
+}
+
+.section {
+  background: #ffffff;
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.toggle,
+.field {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+strong {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+small {
+  color: #667085;
+  display: block;
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 2px;
+}
+
+input[type="checkbox"] {
+  accent-color: #00aeec;
+  height: 18px;
+  width: 18px;
+}
+
+select {
+  background: #ffffff;
+  border: 1px solid #cfd7e3;
+  border-radius: 7px;
+  color: #172033;
+  font-size: 13px;
+  min-height: 34px;
+  padding: 6px 8px;
+}
+
+.button {
+  background: #00aeec;
+  border: 0;
+  border-radius: 7px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 36px;
+  padding: 8px 12px;
+}
+
+.button:hover {
+  background: #0098d1;
+}
+
+.status {
+  color: #667085;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  min-height: 16px;
+}

@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "B站同源助手 for YouTube™",
+  "version": "0.1.4",
+  "description": "在 YouTube™ 视频页寻找 B站同源或相近视频，一键跳转观看，节省跨境视频流量。",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://api.bilibili.com/*",
+    "https://search.bilibili.com/*",
+    "https://www.bilibili.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["src/matcher.js", "src/content.js"],
+      "css": ["styles/content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://search.bilibili.com/*"],
+      "js": ["src/bili-search.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "B站同源助手 for YouTube™",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png",
+      "48": "assets/icons/icon-48.png",
+      "128": "assets/icons/icon-128.png"
+    }
+  }
+}

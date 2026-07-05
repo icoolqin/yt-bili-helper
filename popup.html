@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube B站同源助手</title>
+    <link rel="stylesheet" href="styles/popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <div>
+          <div class="eyebrow">YouTube B站同源助手</div>
+          <h1>在 YouTube 找 B站同源视频</h1>
+        </div>
+      </header>
+
+      <section class="section">
+        <label class="toggle">
+          <span>
+            <strong>自动查找</strong>
+            <small>打开 YouTube 视频页后自动搜索 B站候选。</small>
+          </span>
+          <input id="autoSearch" type="checkbox">
+        </label>
+
+        <label class="field">
+          <span>
+            <strong>匹配严格度</strong>
+            <small>越严格越不容易误报，越宽松越容易找到候选。</small>
+          </span>
+          <select id="strictness">
+            <option value="careful">稳妥</option>
+            <option value="balanced">均衡</option>
+            <option value="relaxed">宽松</option>
+          </select>
+        </label>
+
+        <label class="toggle">
+          <span>
+            <strong>打开前自动点赞</strong>
+            <small>去 B站前先给当前 YouTube 视频点赞，让推荐算法知道你喜欢这个题材。</small>
+          </span>
+          <input id="likeBeforeOpen" type="checkbox">
+        </label>
+      </section>
+
+      <section class="section">
+        <button id="clearCache" class="button">清除确认记录</button>
+        <p id="status" class="status" role="status"></p>
+      </section>
+    </main>
+    <script src="src/popup.js"></script>
+  </body>
+</html>
